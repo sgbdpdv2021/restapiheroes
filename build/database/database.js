@@ -15,10 +15,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.db = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 class DataBase {
-    //  private _cadenaConexion: string =  
-    //  `mongodb+srv://prueba:prueba@cluster0.viyli.mongodb.net/prueba?retryWrites=true&w=majority`
     constructor() {
-        this._cadenaConexion = 'mongodb://localhost/test';
+        //private _cadenaConexion: string = 'mongodb://localhost/test'
+        //  private _cadenaConexion: string =  
+        //  `mongodb+srv://prueba:prueba@cluster0.viyli.mongodb.net/prueba?retryWrites=true&w=majority`
+        this._cadenaConexion = 'mongodb+srv://heroes:heroes@cluster0.viyli.mongodb.net/test?retryWrites=true&w=majority';
         this.conectarBD = () => __awaiter(this, void 0, void 0, function* () {
             const promise = new Promise((resolve, reject) => __awaiter(this, void 0, void 0, function* () {
                 yield mongoose_1.default.connect(this._cadenaConexion, {
